@@ -1,0 +1,94 @@
+Arguments: 
+  /home/kawsar/.nvm/versions/node/v14.15.0/bin/node /usr/share/yarn/bin/yarn.js
+
+PATH: 
+  /home/kawsar/.local/bin:/home/kawsar/.nvm/versions/node/v14.15.0/bin:/home/kawsar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/jdk-15/bin:/usr/lib/jvm/java-15-oracle/bin:/usr/lib/jvm/java-15-oracle/db/bin:/usr/lib/jvm/java-15-oracle/bin:/usr/lib/jvm/java-15-oracle/db/bin:/home/kawsar/Android/Sdk/emulator:/home/kawsar/Android/Sdk/tools:/home/kawsar/Android/Sdk/tools/bin:/home/kawsar/Android/Sdk/platform-tools:/home/kawsar/Android/Sdk/emulator:/home/kawsar/Android/Sdk/tools:/home/kawsar/Android/Sdk/tools/bin:/home/kawsar/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.15.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/kawsar/incomeexpensesapi-master/package.json: Unexpected token / in JSON at position 1652
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "django-react-boilerplate",
+    "version": "0.3.0",
+    "private": true,
+    "dependencies": {
+      "@material-ui/core": "^4.11.1",
+      "@material-ui/icons": "^4.9.1",
+      "@webpack-cli/init": "^1.1.1",
+      "axios": "^0.19.0",
+      "bootstrap": "^4.5.3",
+      "jquery": "^3.5.1",
+      "js-image-zoom": "^0.7.0",
+      "node-sass": "^5.0.0",
+      "prop-types": "^15.7.2",
+      "react": "^16.8.6",
+      "react-bootstrap": "^1.4.0",
+      "react-ckeditor-component": "^1.1.0",
+      "react-dom": "^16.8.6",
+      "react-icons": "^4.1.0",
+      "react-multi-carousel": "^2.6.1",
+      "react-owl-carousel": "^2.3.1",
+      "react-redux": "^7.1.0",
+      "react-responsive-carousel": "^3.2.10",
+      "react-router-dom": "^5.0.1",
+      "react-scripts": "^3.0.1",
+      "react-slick": "^0.27.13",
+      "react-stripe-elements": "^4.0.0",
+      "react-use": "^15.3.4",
+      "redux": "^4.0.1",
+      "redux-thunk": "^2.3.0",
+      "semantic-ui-css": "^2.4.1",
+      "semantic-ui-react": "^0.87.2",
+      "slick-carousel": "^1.8.1",
+      "source-map-resolve": "^0.6.0",
+      "styled-components": "^5.2.1"
+    },
+    "scripts": {
+      "start": "webpack-dev-server --config webpack.dev.js --open",
+      "build": "webpack --config webpack.production.js",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.10",
+      "babel-loader": "^8.2.2",
+      "path": "^0.12.7",
+      "webpack": "^5.11.1",
+      // "webpack-cli": "^4.3.1",
+      "webpack-cli": "^3.3.12",
+      "webpack-dev-server": "^3.11.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
