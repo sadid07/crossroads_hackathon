@@ -235,6 +235,7 @@ class ProductDetail extends React.Component {
     this.setState({ formData: updatedFormData });
     this.setState({ radio_name: id })
     this.setState({ set_name: name })
+    console.log('1',formData)
 
     var removeId = formData[set_name]
     if (radio_name.length === 0) {
@@ -367,6 +368,7 @@ MessageShow  = () =>{
         items: 2
       }
     };
+    console.log('2',formData)
 
 
     return (
@@ -427,7 +429,7 @@ MessageShow  = () =>{
                         return (
                           <>
 
-                            <Radio
+                            {/* <Radio
                               style={{ display: "inline-block", display: "none" }}
                               className='radio__button'
 
@@ -437,7 +439,7 @@ MessageShow  = () =>{
 
                               onChange={this.handleChange}
 
-                            />
+                            /> */}
 
                             <button className='variant__image'  >
                               <Image
