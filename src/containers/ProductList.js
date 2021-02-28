@@ -94,18 +94,18 @@ class ProductList extends React.Component {
                       return (
                     
                         <div class="col-6 col-md-2" style={{ padding: "10px" }}>
-                          <NavLink to={(`/single-product/${item.id}`)} style={{ textDecoration: 'none', color: 'black' }}>
+                          <NavLink to={(`/single-product/${item.id}/${item.slug}`)} style={{ textDecoration: 'none', color: 'black' }}>
                           <div class="thumb-wrapper">
                             <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
                             <div class="img-box">
-                              <NavLink to={(`/single-product/${item.id}`)} style={{ textDecoration: 'none', color: 'black' }}>
+                              <NavLink to={(`/single-product/${item.id}/${item.slug}`)} style={{ textDecoration: 'none', color: 'black' }}>
                                   <img  src={item.image} class="product__image" alt="" />
                               </NavLink>
                             </div>
                             {/* <br></br> */}
                             <div class="thumb-content" style ={{ marginTop:"10px"}}>
-                                <Link class="item-price desktop__product__detail" to={(`/single-product/${item.id}`)} style={{ textDecoration: 'none', color: 'black' }} >  {item.title.slice(0, 40)}...</Link>
-                                <Link class="item-price phone__product__detail" to={(`/single-product/${item.id}`)} style={{ textDecoration: 'none', color: 'black' }} >  {item.title.slice(0, 30)}...</Link>
+                                <Link class="item-price desktop__product__detail" to={(`/single-product/${item.id}/${item.slug}`)} style={{ textDecoration: 'none', color: 'black' }} >  {item.title.slice(0, 40)}...</Link>
+                                <Link class="item-price phone__product__detail" to={(`/single-product/${item.id}/${item.slug}`)} style={{ textDecoration: 'none', color: 'black' }} >  {item.title.slice(0, 30)}...</Link>
                              
                               <div class="star-rating">
 

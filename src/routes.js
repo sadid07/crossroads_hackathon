@@ -43,7 +43,7 @@ import Searching from "./containers/Searching"
 const BaseRouter = () => (
   <Hoc>
     <Route  path="/products" component={ProductList} />
-    <Route path="/single-product/:productID" component={ProductDetail} />
+    <Route path="/single-product/:productID/:productSlug" component={ProductDetail} />
     <Route path="/login" component={Login} />
     <Route path="/signup" component={Signup} />
     <Route path="/order-summary" component={OrderSummary} />
