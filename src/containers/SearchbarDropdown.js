@@ -177,14 +177,20 @@ class SearchbarDropdown extends Component {
                     {results &&
                         results.map(v => {
                             return (
-                                <li   class="list-group-item" style={{ padding: '4px' }}>
-                                    <img src={v.image} class="rounded float-right" style={{ maxWidth: "45px" ,maxHeight:"45px"}} alt="..." />
-                                    <p>
-                                        {v.title}
 
-                                    </p>
+                                    <li class="list-group-item" style={{ padding: '4px' }}>
+                                        <NavLink to={(`/single-product/${v.id}/${v.slug}`)} style={{ textDecoration: 'none', color: 'black' }}>
 
-                                </li>
+                                            <img src={v.image} class="rounded float-right" style={{ maxWidth: "45px" ,maxHeight:"45px"}} alt="..." />
+                                            <p>
+                                            {v.title}
+                                        {/* {v.title.slice(0,200)} */}
+
+                                        </p>
+                                        </NavLink>
+
+                                    </li>
+
                             );
 
                         })}

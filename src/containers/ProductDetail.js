@@ -353,15 +353,15 @@ MessageShow  = () =>{
       superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 8
+        items: 7
       },
       desktop: {
         breakpoint: { max: 3000, min: 1500 },
-        items: 8
+        items: 7
       },
       tablet: {
         breakpoint: { max: 1500, min: 992 },
-        items: 6
+        items: 7
       },
       mobile: {
         breakpoint: { max: 464, min: 0 },
@@ -597,6 +597,7 @@ MessageShow  = () =>{
 
 
         {/* <div className='col-md-12' > */}
+      <div class="container-fluid" style={{maxWidth:"1500px"}}>
 
         <hr></hr>
         <h1>Products related to this item</h1>
@@ -687,7 +688,6 @@ MessageShow  = () =>{
               })}
           </Carousel>
         </div>
-        {/* </div> */}
 
 
 
@@ -784,13 +784,14 @@ MessageShow  = () =>{
               })}
           </Carousel>
         </div>
+        </div>
 
 
 
 
 
 
-        <div className='container'>
+        <div className='container '>
           <br></br>
           <br></br>
         {/* <div className='col-md-12'> */}
