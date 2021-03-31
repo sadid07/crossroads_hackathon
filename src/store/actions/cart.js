@@ -29,7 +29,7 @@ export const fetchCart = () => {
       .get(orderSummaryURL)
       .then(res => {
         dispatch(cartSuccess(res.data));
-        console.log(res)
+        console.log(res,'.........')
       })
       .catch(err => {
         dispatch(cartFail(err));

@@ -61,7 +61,7 @@ class CustomLayout extends React.Component {
               <img
                   className="header__logo header__option header__option2"
                 alt="Orbitplug-logo"
-                  src="https://scontent.fdac116-1.fna.fbcdn.net/v/t1.15752-9/133745315_735139640541625_7317427978315017007_n.png?_nc_cat=104&ccb=3&_nc_sid=ae9488&_nc_ohc=6YNG3O9HtCkAX-dgIUn&_nc_ht=scontent.fdac116-1.fna&oh=4fff8c06a1d42e1c19b34a7d68733427&oe=6052992B"
+                  src="http://127.0.0.1:8000/media/images/133745315_735139640541625_7317427978315017007_n.png"
               />
             </Link>
               <div className="header__option header__option header__option2" style = {{marginRight:"5px"}}>
@@ -261,7 +261,7 @@ class CustomLayout extends React.Component {
                           
 
                         
-                          <span className="header__basketCount"> {`${cart !== null ? cart.order_items.length : 0}`}</span>
+                          <span className="header__basketCount"> {`${cart !== null ? cart.get_total_quantites : 0}`}</span>
 
                             <svg  style ={{marginTop:'25px',marginLeft:"-13px"}} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
                               <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
@@ -396,7 +396,7 @@ class CustomLayout extends React.Component {
               <img
                 className="phone__header__logo"
                 alt="Orbitplug-logo"
-                src="https://scontent.fdac116-1.fna.fbcdn.net/v/t1.15752-9/133745315_735139640541625_7317427978315017007_n.png?_nc_cat=104&ccb=3&_nc_sid=ae9488&_nc_ohc=6YNG3O9HtCkAX-dgIUn&_nc_ht=scontent.fdac116-1.fna&oh=4fff8c06a1d42e1c19b34a7d68733427&oe=6052992B"
+                src="http://127.0.0.1:8000/media/images/133745315_735139640541625_7317427978315017007_n.png"
                 />
             </Link>
            
@@ -480,8 +480,6 @@ class CustomLayout extends React.Component {
 
 
 
-
-
 {/* ............................... End Phone  Searchbar .............................................. */}
 
           
@@ -531,7 +529,7 @@ class CustomLayout extends React.Component {
         >
           <Container textAlign="center">
             <Grid divided inverted stackable>
-              <Grid.Column width={3}>
+              <Grid.Column width={4}>
                 <h5>AboutUs</h5>
                 <List link inverted>
                   <List.Item as="a">Link One</List.Item>
@@ -540,29 +538,28 @@ class CustomLayout extends React.Component {
                   <List.Item as="a">Link Four</List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={3}>
+              <Grid.Column width={4}>
                 <h5>Payment</h5>
                 <List link inverted>
-                  <List.Item as="a">Link One</List.Item>
-                  <List.Item as="a">Link Two</List.Item>
-                  <List.Item as="a">Link Three</List.Item>
-                  <List.Item as="a">Link Four</List.Item>
+                  <List.Item as="a">Bkash 01771297948 personal</List.Item>
+                  <List.Item as="a">Nogot 01771297948 personal</List.Item>
+                  <List.Item as="a">Rocket 01771297948 personal</List.Item>
+                  <List.Item as="a">Sucrecash 01771297948 personal </List.Item>
                 </List>
               </Grid.Column>
               <Grid.Column width={3}>
-                <h5>Payment</h5>
+                <h5>Contact info</h5>
                 <List link inverted>
-                  <List.Item as="a">Link One</List.Item>
-                  <List.Item as="a">Link Two</List.Item>
-                  <List.Item as="a">Link Three</List.Item>
-                  <List.Item as="a">Link Four</List.Item>
+                  <List.Item as="a">+8801575032874</List.Item>
+                  <List.Item as="a">+8801771297948</List.Item>
+                  <List.Item as="a">orbitplug@gmail.com</List.Item>
+                  <List.Item as="a">orbitplugteam@gmail.com</List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={7}>
-                <h5>Footer Header</h5>
+              <Grid.Column width={5}>
+                <h5>OrbitPlug</h5>
                 <p>
-                  Extra space for a call to action inside the footer that could
-                  help re-engage users.
+                ‘If you should need to contact us for any reason, please do not hesitate. Customer satisfaction is our highest priority. We would love the chance to speak with you.’
                 </p>
               </Grid.Column>
             </Grid>

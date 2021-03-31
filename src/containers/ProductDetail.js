@@ -413,7 +413,7 @@ MessageShow  = () =>{
             <div className="col-md-6 my-2  " >
                 <h4 className='title desktop__product__detail' id='title'>{item.title}</h4>
                 <br></br>
-              <h5> ৳ {item.price}  </h5>
+              <h5> <strike> ৳ {item.price}</strike> <b>৳ {item.discount_price}  </b> </h5>
                 <h5 className='color' id="color"> </h5>
                 <h5 className='size' id="size">  </h5>
                 <h5 className='quantity' id="quantity"> </h5>

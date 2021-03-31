@@ -29,7 +29,6 @@ import { endpoint } from "../constants";
 
 // import Select from 'react-select'
 class UserProfileUpdate extends React.Component {
-
     state = {
         data1: '',
         error: null,
@@ -51,10 +50,6 @@ class UserProfileUpdate extends React.Component {
 
 
     };
-
-
-
-
 
 
     componentDidMount() {
@@ -138,6 +133,7 @@ class UserProfileUpdate extends React.Component {
 
             })
             .catch(err => {
+                console.log(err.response.data)
                 this.setState({ error: err, loading: false });
             });
     };

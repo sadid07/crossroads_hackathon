@@ -14,7 +14,6 @@ import {
   Item
 } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { Link, Redirect, NavLink } from "react-router-dom";
 import { authAxios } from "../utils";
 import {
   addToCartURL,
@@ -23,6 +22,8 @@ import {
   orderItemUpdateQuantityURL
 } from "../constants";
 import { endpoint, endpointlocahost } from "../constants";
+import { fetchCart } from "../store/actions/cart";
+import { withRouter, Link, NavLink, Redirect} from "react-router-dom";
 
 class OrderSummary extends React.Component {
   state = {
@@ -36,6 +37,8 @@ class OrderSummary extends React.Component {
     window.scrollTo(0, 0);
 
   }
+
+
 
   handleFetchOrder = () => {
     this.setState({ loading: true });
@@ -82,6 +85,7 @@ class OrderSummary extends React.Component {
       .post(addToCartURL, { slug, variations })
       .then(res => {
         this.handleFetchOrder();
+        this.props.refreshCart();
         this.setState({ loading: false });
       })
       .catch(err => {
@@ -94,6 +98,7 @@ class OrderSummary extends React.Component {
       .post(orderItemUpdateQuantityURL, { slug })
       .then(res => {
         this.handleFetchOrder();
+        this.props.refreshCart();
       })
       .catch(err => {
         this.setState({ error: err });
@@ -105,6 +110,7 @@ class OrderSummary extends React.Component {
       .delete(orderItemDeleteURL(itemID))
       .then(res => {
         this.handleFetchOrder();
+        this.props.refreshCart();
       })
       .catch(err => {
         this.setState({ error: err });
@@ -363,4 +369,25 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(OrderSummary);
+const mapDispatchToProps = dispatch => {
+  return {
+    refreshCart: () => dispatch(fetchCart())
+  };
+};
+
+
+
+
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(OrderSummary)
+);
+
+
+
+
+
+// export default connect(mapStateToProps)(OrderSummary);

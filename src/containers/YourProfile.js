@@ -33,12 +33,44 @@ import {
 import { authAxios } from "../utils";
 import { endpoint } from "../constants";
 
+import axios from "axios";
 
 
 class YourProfile extends React.Component {
+    state = {
+        loading: false,
+        error: null,
+        data: []
+      };
+    
+
+
+    componentDidMount() {
+        this.setState({ loading: true });
+        
+          window.scrollTo(0, 0);
+      
+    
+    
+        axios
+          .get(`${endpoint}/YourProfileView/`)
+    
+          .then(res => {
+            this.setState({ data: res.data.results, loading: false });
+            window.scrollTo(0, 0);
+    
+    
+          })
+          .catch(err => {
+            this.setState({ error: err, loading: false });
+          });
+      }
+
 
 
     render() {
+        const { data, error, loading } = this.state;
+
         const isAuthenticated = localStorage.getItem('token')
         if (!isAuthenticated) {
             return <Redirect to="/login" />;
@@ -46,133 +78,39 @@ class YourProfile extends React.Component {
         window.scrollTo(0, 0);
 
         return (
+
+
             <div className='container my-5'>
                 <div className='row '>
                     <div className='col-md-12'>
                         <div className='row'>
+                        {data.map(v => {
+                            return (
+        
+                                <div className='col-md-4'>
+                                    <br></br>
+                                    <div class="list-group" id="list-tab" role="tablist">
+                                        <NavLink to={`/${v.link}`} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
+                                            <div className='row'>
+                                                <div className="col-md-12">
+                                                    <img style={{ width: "55px", height: "55px", display: "inline-block" }} src={v.image} class="rounded float-start" alt="..." />
+                                                    <h5 style={{ display: 'inline-block', marginTop: "12px", marginLeft: "22px" }}>{v.name}</h5>
 
-                            <div className='col-md-4'>
-                                <br></br>
-                                <div class="list-group" id="list-tab" role="tablist">
-                                    <NavLink to={'/userprofile'} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
-                                        <div className='row'>
-                                            <div className="col-md-12">
-                                                <img style={{ width: "66px", height: "50px", display: "inline-block" }} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F587%2F247%2Foriginal%2Fvector-cool-emoji-icon.jpg&f=1&nofb=1" class="rounded float-start" alt="..." />
-                                                <h5 style={{ display: 'inline-block', marginTop: "12px", marginLeft: "22px" }}>Profile</h5>
+                                                </div>
 
+                                                <p></p>
                                             </div>
-
-                                            <p></p>
-                                        </div>
-                                    </NavLink>
+                                        </NavLink>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='col-md-4'>
-                                <br></br>
-                                <div class="list-group" id="list-tab" role="tablist">
-                                    <NavLink to={'#'} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
-                                        <div className='row'>
-                                            <div className="col-md-12">
-                                                <img style={{ width: "66px", height: "50px", display: "inline-block" }} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F587%2F247%2Foriginal%2Fvector-cool-emoji-icon.jpg&f=1&nofb=1" class="rounded float-start" alt="..." />
-                                                <h5 style={{ display: 'inline-block', marginTop: "12px", marginLeft: "22px" }}>My Comments</h5>
-
-                                            </div>
-
-                                            <p></p>
-                                        </div>
-                                    </NavLink>
-                                </div>
-                            </div>
-                            <div className='col-md-4'>
-                                <br></br>
-                                <div class="list-group" id="list-tab" role="tablist">
-                                    <NavLink to={'#'} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
-                                        <div className='row'>
-                                            <div className="col-md-12">
-                                                <img style={{ width: "66px", height: "50px", display: "inline-block" }} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F587%2F247%2Foriginal%2Fvector-cool-emoji-icon.jpg&f=1&nofb=1" class="rounded float-start" alt="..." />
-                                                <h5 style={{ display: 'inline-block', marginTop: "12px", marginLeft: "22px" }}>My Favorits</h5>
-
-                                            </div>
-
-                                            <p></p>
-                                        </div>
-                                    </NavLink>
-                                </div>
-                            </div>
-
-                            <div className='col-md-4'>
-                                <br></br>
-                                <div class="list-group" id="list-tab" role="tablist">
-                                    <NavLink to={'#'} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
-                                        <div className='row'>
-                                            <div className="col-md-12">
-                                                <img style={{ width: "66px", height: "50px", display: "inline-block" }} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F587%2F247%2Foriginal%2Fvector-cool-emoji-icon.jpg&f=1&nofb=1" class="rounded float-start" alt="..." />
-                                                <h5 style={{ display: 'inline-block', marginTop: "12px", marginLeft: "22px" }}>Browsing Hostory</h5>
-
-                                            </div>
-
-                                            <p></p>
-                                        </div>
-                                    </NavLink>
-                                </div>
-                            </div>
-
-                            <div className='col-md-4'>
-                                <br></br>
-                                <div class="list-group" id="list-tab" role="tablist">
-                                    <NavLink to={'/userprofile'} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
-                                        <div className='row'>
-                                            <div className="col-md-12">
-                                                <img style={{ width: "66px", height: "50px", display: "inline-block" }} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F587%2F247%2Foriginal%2Fvector-cool-emoji-icon.jpg&f=1&nofb=1" class="rounded float-start" alt="..." />
-                                                <h5 style={{ display: 'inline-block', marginTop: "12px", marginLeft: "22px" }}>Bulling Address</h5>
-
-                                            </div>
-
-                                            <p></p>
-                                        </div>
-                                    </NavLink>
-                                </div>
-                            </div>
-
-                            <div className='col-md-4'>
-                                <br></br>
-                                <div class="list-group" id="list-tab" role="tablist">
-                                    <NavLink to={'/shippingaddress'} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
-                                        <div className='row'>
-                                            <div className="col-md-12">
-                                                <img style={{ width: "66px", height: "50px", display: "inline-block" }} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F587%2F247%2Foriginal%2Fvector-cool-emoji-icon.jpg&f=1&nofb=1" class="rounded float-start" alt="..." />
-                                                <h5 style={{ display: 'inline-block', marginTop: "12px", marginLeft: "22px" }}>Shipping Address</h5>
-
-                                            </div>
-
-                                            <p></p>
-                                        </div>
-                                    </NavLink>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                  );
+                                })}
+                        
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
-
+  
 
         );
     }
