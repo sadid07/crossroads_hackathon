@@ -183,14 +183,15 @@ class SearchbarDropdown extends Component {
 
                                             <img src={v.image} class="rounded float-right" style={{ maxWidth: "45px" ,maxHeight:"45px"}} alt="..." />
                                             <p>
-                                            {v.title}
-                                        {/* {v.title.slice(0,200)} */}
+                                            {/* {v.title} */}
+                                        {v.title.slice(0,30)}
 
                                         </p>
                                         </NavLink>
 
                                     </li>
 
+]
                             );
 
                         })}
