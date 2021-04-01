@@ -61,7 +61,7 @@ class CustomLayout extends React.Component {
               <img
                   className="header__logo header__option header__option2"
                 alt="Orbitplug-logo"
-                  src="http://127.0.0.1:8000/media/images/133745315_735139640541625_7317427978315017007_n.png"
+                  src="http://kawsarkhan.com/media/images/133745315_735139640541625_7317427978315017007_n.png"
               />
             </Link>
               <div className="header__option header__option header__option2" style = {{marginRight:"5px"}}>
@@ -396,7 +396,7 @@ class CustomLayout extends React.Component {
               <img
                 className="phone__header__logo"
                 alt="Orbitplug-logo"
-                src="http://127.0.0.1:8000/media/images/133745315_735139640541625_7317427978315017007_n.png"
+                src="http://kawsarkhan.com/media/images/133745315_735139640541625_7317427978315017007_n.png"
                 />
             </Link>
            

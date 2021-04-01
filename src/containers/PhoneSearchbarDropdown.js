@@ -191,15 +191,18 @@ class PhoneSearchbarDropdown extends Component {
                                         return (
 
                                             <li class="list-group-item" style={{ padding: '4px' }}>
+                                              <NavLink to={(`/single-product/${v.id}/${v.slug}`)} style={{ textDecoration: 'none', color: 'black' }}>
+
                                                 <img src={v.image} class="rounded float-right" style={{ width: "60px" }} alt="..." />
                                                 {/* <img src={v.image}  alt="..." class="rounded"></img> */}
                                                 <p>
-                                                    {v.title}
+                                                {v.title.slice(0,30)}...
 
                                                 </p>
 
                                                 {/* <img src = {v.image} style={{width:"100%" }}></img> */}
 
+                                                </NavLink> 
 
 
 
