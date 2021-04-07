@@ -35,7 +35,7 @@ class HomepageLayout extends Component {
       <>
         {/* ....................................... Desktop Home Body Start .................................................................*/}
        
-        <div className='desktop__home__page home'>
+        <div>
           <DeskTopHomepageLayout></DeskTopHomepageLayout>
         </div> 
         {/* ....................................... Desktop Home Body End.................................................................... */}
@@ -43,6 +43,7 @@ class HomepageLayout extends Component {
 
         {/* ....................................... Phone Home Body Start.................................................................... */}
         <div className='phone__home__page'> 
+        
           <PhoneHomepageLayout></PhoneHomepageLayout>
        </div>
        
