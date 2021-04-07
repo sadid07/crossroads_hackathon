@@ -14,8 +14,11 @@ import "./Login.css"
 import { GoogleLogin } from 'react-google-login';
 import axios from "axios";
 import FacebookLogin from 'react-facebook-login';
+import Zoom from 'react-reveal/Zoom';
+
 // import TiSocialFacebookCircular from 'react-icons/lib/ti/social-facebook-circular';
 import './Login.css'
+
 // import * as actionTypes from "./actionTypes";
 import { authSuccess, authFail, checkAuthTimeout } from '../store/actions/auth'
 import { endpoint, endpointlocahost, endpointlocahostsocilauth } from "../constants";
@@ -79,7 +82,7 @@ class LoginForm extends React.Component {
 
 
   responseFacebook = (response) => {
-    console.log(response.accessToken);
+    console.log(response,'.................');
 
 
     this.setState({ token: response.accessToken, loading: false });
@@ -117,6 +120,7 @@ class LoginForm extends React.Component {
   // }
 
   render() {
+    window.scrollTo(0, 0);
     const { error, loading, token } = this.props;
     const { email, password } = this.state;
     if (Object.values(this.props).length > 1) {
@@ -178,13 +182,17 @@ class LoginForm extends React.Component {
     return (
       <>
 
+
+
+
         <Grid
           textAlign="center"
           style={{ height: "100vh" }}
           verticalAlign="middle"
         >
+           
           <Grid.Column style={{ maxWidth: 450 }}>
-
+          <Zoom left>
             {/* {error && <p>{this.props.error.message}</p>} */}
             <h6 className='error_messes' id="error_messes"></h6>
 
@@ -252,13 +260,23 @@ class LoginForm extends React.Component {
                     textButton={" \u00a0 \u00a0 Login"}
                     // size='small'
                     // for test
-                    appId="781826136014066"
+                    // local host 
+                    appId="152971560061948"
+
+
+                    // local host it is working
+                    // appId="566800850960501"
+
+
+                    // orbitplug
+                    // appId="781826136014066"
+
                     // for production
-                    //                     appId="2898621653732285"
+                    // appId="779646426301443"
 
                     autoLoad={false}
-                    fields="name,email,picture"
-                    scope="public_profile,user_friends,user_actions.books"
+                    scope="email"
+                    // fields="name,email,picture"
                     callback={this.responseFacebook}
                     cssClass="my-facebook-button-class"
                     icon={<svg style={{ color: '#1771E6' }} xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -274,9 +292,21 @@ class LoginForm extends React.Component {
               </Form>
               <Message>
                 New to us? <NavLink to="/signup">Sign Up</NavLink>
+
+
+
+
+
+     
+     
+         
+        
+      
               </Message>
             </React.Fragment>
+            </Zoom>
           </Grid.Column>
+          
         </Grid>
 
 
