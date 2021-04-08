@@ -24,15 +24,11 @@ import { useStateValue } from "./StateProvider";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Button } from 'react-bootstrap';
 import HeaderBottom from "./HeaderBottom"
-import Sidebar from "./Sidebar"
 import PhoneHomepageLayout from './PhoneHomepageLayout'
 import HomepageLayout from "./Home"
 import "./Home.css"
-import SidebarPhone from "./SidebarPhone"
 import axios from 'axios'
 import DeskTopHomepageLayoutProduct from './DeskTopHomepageLayoutProduct'
-import SearchbarDropdown from './SearchbarDropdown'
-import PhoneSearchbarDropdown from './PhoneSearchbarDropdown'
 import { endpoint, endpointauth } from "../constants";
 import "./styles.css";
 // import './main.js'
@@ -59,9 +55,10 @@ class CustomLayout extends React.Component {
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="/" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="/dashboard" class="nav__link">Dashboard</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                        <li class="nav__item"><a href="#FAQ" class="nav__link">FAQ</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
                         
                         <Link to={"/login"} >

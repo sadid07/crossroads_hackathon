@@ -15,7 +15,6 @@ import {
 import Carousel from "./Carousel";
 import "./Home.css";
 import { authAxios } from "../utils";
-import Product from "./Product";
 import { productListURL, addToCartURL } from "../constants";
 import PhoneHomepageLayout from './PhoneHomepageLayout'
 import axios from "axios";
@@ -35,7 +34,7 @@ class HomepageLayout extends Component {
       <>
         {/* ....................................... Desktop Home Body Start .................................................................*/}
        
-        <div>
+        <div className='desktop__home__page home'>
           <DeskTopHomepageLayout></DeskTopHomepageLayout>
         </div> 
         {/* ....................................... Desktop Home Body End.................................................................... */}

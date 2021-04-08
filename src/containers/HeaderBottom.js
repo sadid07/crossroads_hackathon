@@ -3,7 +3,6 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link, withRouter, NavLink } from "react-router-dom";
-import Sidebar from "./Sidebar"
 import './Header.css'
 import React from "react";
 import "./Header2.css"
