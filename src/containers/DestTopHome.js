@@ -72,6 +72,8 @@ import un2 from "./img/un2.jpg"
 import un3 from "./img/un3.png"
 import un4 from "./img/un4.png"
 import un5 from "./img/un5.png"
+import un6 from "./img/un6.png"
+import un7 from "./img/un7.png"
 
 import wocommaerce from "./img/wocommaerce.png"
 import django from "./img/django.png"
@@ -88,7 +90,7 @@ import "./styles.css";
 class DestTopHome extends React.Component {
 
 
-
+    // https://bup.edu.bd/system/uploads/setting/value/29/combocation.jpg
 
 render() {
 
@@ -99,227 +101,211 @@ render() {
 
         
 
-<div className='container-fluid'>
-    <div className='row' style ={{marginTop:'0px'}}>
-        <div className='col-md-12' style={{
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            position:'relative', 
-            backgroundImage:'url(https://bup.edu.bd/system/uploads/setting/value/29/combocation.jpg)',}}> 
-            <div className='row' style={{backgroundColor:'rgba(223, 217, 217, 0.6)',position: "relative"}}>
-            
-                <div className='col-md-1'></div>
-                        
-                    <div className='col-md-5' >
-                    <h1 class="home__title">crossroads-study</h1>
-                    <h4 class="home__subtitle">We connect 
-                        International 
-                        University students 
-                        with High School students 
-                        for providing 
-                        one-on-one mentoring 
-                        for studying abroad with 
-                        Scholarships. 
-                    </h4>
+<div className='container-fluid my-5'>
+    <div className='row' style ={{marginTop:'0px',textAlign:'center'}}>
+    <div className='col-md-12'>
+            <h2 style ={{color:'#FA3C00'}}>
+            MENTORSHIP PLATFORM FOR HIGHER EDUCATION ABROAD
+            </h2>
+
+        </div>
+        <div className='col-md-3' >         </div>
+
+
+
+        <div className='col-md-6 my-5'>
+            <h4>ARE YOU LOOKING FOR A SCHOLARSHIP TO STUDY ABROAD?
+                YOU ARE IN THE RIGHT PLACE!
+            </h4>
+
+        </div>
+
+    <div className='col-md-6' > 
+        <img src={image1} class="img-fluid" alt="..."/>
+
+
+
+        </div>
+
+
+        <div className='col-md-6' > 
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+            <h2>    We connect 
+                    International 
+                    University students 
+                    with High School students 
+                    for providing 
+                    one-on-one mentoring 
+                    for studying abroad with 
+                    Scholarships. 
+            </h2>
+        </div>
+
+
+
+
+
+
+        <div className='col-md-6' > 
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+            <h3>    
+            Our platform allows university 
+            & high-school student 
+            from any country of the world 
+            to sign-up and receive mentoring 
+            by a student 
+            from their 
+            desired university program.
+                            
                 
-                    </div>
-
-                    <div className='col-md-6'>
-                    {/* <!--========== HOME ==========--> */}
-                        
-                    <img src={image6} alt="" class="home__img"/>
-                    </div>
-
-
-
-
-                    
-                <div className='col-md-6 m-5 my-5'>
-                        
-                    <img src={image7} alt="" class="about__img"/>
-                            
-                </div>
-                            
-                <div className='col-md-5 my-5'style = {{textAlign: 'center'}}>
-                    <div class="about__data">
-                        <h2 >About us</h2>
-
-                        <h2 style={{color:'red'}}>We cook the best <br/> crossroads-study</h2>
-                        <p style={{fontSize:'18px'}} >
-                            Our platform allows university 
-                            & high-school student 
-                            from any country of the world 
-                            to sign-up and receive mentoring 
-                            by a student 
-                            from their 
-                            desired university program.
-                        </p>
-                        <a href="#" class="button">Explore history</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div className='col-md-12' style={{ 
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            position:'relative', 
-            backgroundImage:'url(https://bup.edu.bd/system/uploads/setting/value/26/bup_final.jpg)',}}> 
+                
+            </h3>
             
-            <div className='row' style={{backgroundColor:'rgba(223, 217, 217, 0.6)',position: "relative"}}>
-                <div className='col-md-12 '>
-                    <h2 class="section-title">Achievement</h2>
-                </div>
 
-                <div class="col-md-1">  </div>
-
-
-
-                <div class="col-md-2">
-                        <div class="menu__content">
-                            <img src={Aranya} alt="" class="menu__img"/>
-                            <h3 class="menu__name">Aranya Kishor Das</h3>
-                            <span class="menu__detail"> Saint Lawrence University</span>
-                            <span class="menu__detail"> Lawrence International Scholarship</span>
-                            <span class="menu__preci"> Amoun $40,000</span>
-                            <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-2">
-                        <div class="menu__content">
-                            <img src={Aranya} alt="" class="menu__img"/>
-                            <h3 class="menu__name">Aranya Kishor Das</h3>
-                            <span class="menu__detail"> Saint Lawrence University</span>
-                            <span class="menu__detail"> Lawrence International Scholarship</span>
-                            <span class="menu__preci"> Amoun $40,000</span>
-                            <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="menu__content">
-                            <img src={Aranya} alt="" class="menu__img"/>
-                            <h3 class="menu__name">Aranya Kishor Das</h3>
-                            <span class="menu__detail"> Saint Lawrence University</span>
-                            <span class="menu__detail"> Lawrence International Scholarship</span>
-                            <span class="menu__preci"> Amoun $40,000</span>
-                            <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-md-2">
-
-
-                        <div class="menu__content">
-                            <img src={Tanvir} alt="" class="menu__img"/>
-                            <h3 class="menu__name">Tanvir Rahman Khan</h3>
-                            <span class="menu__detail"> Saint Lawrence University</span>
-                            <span class="menu__detail"> Lawrence International Scholarship</span>
-                            <span class="menu__preci"> Amoun $140,000 </span>
-                            <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-
-                        
-                        <div class="menu__content">
-                            <img src={Tanvir} alt="" class="menu__img"/>
-                            <h3 class="menu__name">Aranya Kishor Das</h3>
-                            <span class="menu__detail"> Saint Lawrence University</span>
-                            <span class="menu__detail"> Lawrence International Scholarship</span>
-                            <span class="menu__preci"> Amoun $140,000 </span>
-                            <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-                        </div>
-                    </div>
-
-         
-             
-    
-
-             
-       
-
-
-        
-
-            {/* <!--===== APP =======--> */}
-            <section class="app section bd-container">
-                <div class="app__container bd-grid">
-                    <div class="app__data">
-                        <span class="section-subtitle app__initial">App</span>
-                        <h2 class="section-title app__initial">App is aviable</h2>
-                        <p class="app__description">Find our application and download it, you can make reservations, food orders, see your deliveries on the way and much more.</p>
-                        <div class="app__stores">
-                            <a href="#"><img src={app1} alt="" class="app__store"/></a>
-                            <a href="#"><img src={app2}alt="" class="app__store"/></a>
-                        </div>
-                    </div>
-
-                    <img src={image9} alt="" class="app__img"/>
-                </div>
-            </section>
-
-            </div>
         </div>
 
-    <div className="col-md-12">
-        <div className="row my-5" >
 
 
-        <div className='col-md-2'>  
-                <div style={{borderRadius:"10px"}} class="list-group" id="list-tab" role="tablist">
-                    <div  class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
-                        <img  src={flask}  class="rounded float-start" alt="..."/>
-                            
-                     </div>
-                </div>
 
-            </div>
+        <div className='col-md-6' > 
 
-            <div className='col-md-2'>  
-                <div style={{borderRadius:"10px"}} class="list-group" id="list-tab" role="tablist">
-                    <div  class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
-                        <img  src={reactjs}  class="rounded float-start" alt="..."/>
-                            
-                     </div>
-                </div>
+            <img src={image1} class="img-fluid" alt="..."/>
 
-            </div>
 
-            <div className='col-md-2'>  
-                <div style={{borderRadius:"10px"}} class="list-group" id="list-tab" role="tablist">
-                    <div  class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
-                        <img  src={django}  class="rounded float-start" alt="..."/>
-                            
-                     </div>
-                </div>
 
-            </div>
+        </div>
+        <div className='col-md-2 my-5'>    </div>
 
+
+    <div className='col-md-8 my-5'>
+        <h2 style={{color:'red'}}>LAST YEAR WE HELPED STUDENTS RECEIVE 70+ SCHOLARSHIPS IN TOP UNIVERSITIES!</h2>
         
-            <div className='col-md-2'>  
-                <div style={{borderRadius:"10px"}} class="list-group" id="list-tab" role="tablist">
-                    <div  class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
-                        <img  src={wocommaerce}  class="rounded float-start" alt="..."/>
-                            
-                     </div>
-                </div>
 
+    </div>
+
+    <div className='col-md-2 '>    </div>
+
+
+    <div className = 'col-md-12'>
+        <div className='row'>
+
+            <div className='col-md-2 '>   
+                <img src={un2} class="img-fluid" alt="..."/>
             </div>
 
-        
+            <div className='col-md-2 '>   
+                <img src={un3} class="img-fluid" alt="..."/>
+            </div>
+
+            <div className='col-md-2 '>   
+                <img src={un4} class="img-fluid" alt="..."/>
+            </div>
+
+            <div className='col-md-2 '>   
+                <img src={un5} class="img-fluid" alt="..."/>
+            </div>
+            <div className='col-md-2 '>   
+                <img src={un6} class="img-fluid" alt="..."/>
+            </div>
+            <div className='col-md-2 '>   
+                <img src={un7} class="img-fluid" alt="..."/>
+            </div>
 
 
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div className = 'col-md-12 my-5'>
+        <div className='row'>
+
+
+    <div className='col-md-2 '>    </div>
+
+
+    <div className='col-md-8 '>
+        <h4 style={{color:'black'}}>
+            SERVICES WE PROVIDE:
+            STEP-BY-STEP UNIVERSITY APPLICATION 
+
+            SAT One Month Crash Course
+
+            IELTS One Month Crash Course
+
+            WE HELP YOU FOR 8 COUNTRIES
+            AMERICA, SOUTH KOREA, GERMANY, LONDON, AUSTRALIA, ARGENTINA, SINGAPORE, TAIWAN
+
+        </h4>
+        
+
+    </div>
+
+
+    <div className="col-md-12 my-5">
+        <h1> JOIN US TODAY
+                FOR FREE
+                CLICK HERE</h1>
+               
+            
+
+    </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
    
 
 
@@ -332,10 +318,8 @@ render() {
          
 
 
-        </div>
 
 
-</div>
 
 
     </>

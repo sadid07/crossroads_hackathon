@@ -23,7 +23,9 @@ class DeskTopHomepageLayout extends Component {
             <div className="row">
                    
                 {/* .............................................. Start Slider............................................... */}            
-                        <Carousel />
+                        {/* <Carousel /> */}
+                        <img src="https://bup.edu.bd/system/uploads/setting/value/29/combocation.jpg" class="img-fluid" alt="..."></img>
+
                 {/* .............................................. End Slider............................................... */}
 
                     <DestTopHome></DestTopHome>
