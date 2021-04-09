@@ -70,7 +70,7 @@ render() {
     <>
 
         
-<main class="l-main">
+<main class="l-main" style ={{backgroundColor:"#FAFAFA"}}>
             {/* <!--========== HOME ==========--> */}
             <section class="home" id="home">
                 <div class="home__container bd-container bd-grid">

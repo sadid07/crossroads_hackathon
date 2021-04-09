@@ -34,14 +34,14 @@ class HomepageLayout extends Component {
       <>
         {/* ....................................... Desktop Home Body Start .................................................................*/}
        
-        <div className='desktop__home__page home'>
+        <div className='desktop__home__page home' style ={{backgroundColor:"#FAFAFA"}}>
           <DeskTopHomepageLayout></DeskTopHomepageLayout>
         </div> 
         {/* ....................................... Desktop Home Body End.................................................................... */}
 
 
         {/* ....................................... Phone Home Body Start.................................................................... */}
-        <div className='phone__home__page'> 
+        <div className='phone__home__page' style ={{backgroundColor:"#FAFAFA"}}> 
         
           <PhoneHomepageLayout></PhoneHomepageLayout>
        </div>

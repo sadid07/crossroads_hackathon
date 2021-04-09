@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
 .home {
   display: flex;
   justify-content: center;
@@ -15,8 +17,12 @@
    
 
 }
+body{
+  background-color:#FFFFFF
+}
 
 
-
-
+.container {
+background-color :#FAFAFA
+}
 

@@ -48,7 +48,7 @@ class CustomLayout extends React.Component {
       </a>
       
       {/* <!--========== HEADER ==========--> */}
-        <header class="l-header" id="header">
+        <header class="l-header" id="header" >
             <nav class="nav bd-container">
                 <a href="/" class="nav__logo">crossroads-study</a>
 
@@ -60,6 +60,8 @@ class CustomLayout extends React.Component {
                         <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                         <li class="nav__item"><a href="#FAQ" class="nav__link">FAQ</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+                        <li class="nav__item"><a href="skills" class="nav__link"> Skills </a></li>
+                        
                         
                         <Link to={"/login"} >
                         <li class="nav__item"><a href="#contact" class="nav__link">SignUp</a></li>
@@ -100,7 +102,7 @@ class CustomLayout extends React.Component {
 
 
       {/* // <!--========== FOOTER ==========--> */}
-        <footer class="footer section footer-container">
+        <footer class="footer section footer-container" >
             <div class="footer__container bd-grid">
                 <div class="footer__content">
                     <a href="#" class="footer__logo">crossroads-study</a>

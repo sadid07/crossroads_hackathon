@@ -9,6 +9,7 @@ import { authAxios } from "../utils";
 import axios from "axios";
 import "./Product.css"
 import DestTopHome from "./DestTopHome"
+import slider1 from './CarouselImage/slider1.png'
 
 class DeskTopHomepageLayout extends Component {
  
@@ -18,13 +19,13 @@ class DeskTopHomepageLayout extends Component {
 
         return (
             <>
-        <div className='container-fluid home' >
+        <div className='container-fluid home' style ={{backgroundColor:"#FAFAFA"}}>
                 
-            <div className="row">
+            <div className="row" style ={{backgroundColor:"#FAFAFA"}}>
                    
                 {/* .............................................. Start Slider............................................... */}            
                         {/* <Carousel /> */}
-                        <img src="https://bup.edu.bd/system/uploads/setting/value/29/combocation.jpg" class="img-fluid" alt="..."></img>
+                        <img src={slider1} class="img-fluid" alt="..."></img>
 
                 {/* .............................................. End Slider............................................... */}
 

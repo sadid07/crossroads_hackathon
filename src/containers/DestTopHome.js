@@ -56,6 +56,18 @@ import image9 from "./img/image9.jpeg"
 
 
 
+import image10 from "./img/image10.jpg"
+
+import image11 from "./img/image11.JPG"
+import image12 from "./img/image12.JPG"
+import image13 from "./img/image13.jpg"
+import image14 from "./img/image14.jpg"
+
+
+
+
+
+
 
 
 
@@ -74,6 +86,13 @@ import un4 from "./img/un4.png"
 import un5 from "./img/un5.png"
 import un6 from "./img/un6.png"
 import un7 from "./img/un7.png"
+
+
+
+
+
+
+
 
 import wocommaerce from "./img/wocommaerce.png"
 import django from "./img/django.png"
@@ -101,8 +120,8 @@ render() {
 
         
 
-<div className='container-fluid my-5'>
-    <div className='row' style ={{marginTop:'0px',textAlign:'center'}}>
+<div className='container-fluid my-5'  style ={{backgroundColor:"#FAFAFA"}} >
+    <div className='row'style ={{backgroundColor:"#FAFAFA",marginTop:'0px',textAlign:'center'}}>
     <div className='col-md-12'>
             <h2 style ={{color:'#FA3C00'}}>
             MENTORSHIP PLATFORM FOR HIGHER EDUCATION ABROAD
@@ -121,32 +140,24 @@ render() {
         </div>
 
     <div className='col-md-6' > 
-        <img src={image1} class="img-fluid" alt="..."/>
+        <img src={image14} class="img-fluid" alt="..."/>
 
 
 
         </div>
 
 
-        <div className='col-md-6' > 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-            <h2>    We connect 
-                    International 
-                    University students 
-                    with High School students 
-                    for providing 
-                    one-on-one mentoring 
-                    for studying abroad with 
-                    Scholarships. 
+        <div className='col-md-6 my-5' > 
+     
+    
+            <h2 style = {{fontSize:"35px",fontWeight:'bold'}}>    We connect <br></br>
+                    International <br></br>
+                    University students <br></br>
+                    with High School students <br></br>
+                    for providing <br></br>
+                    one-on-one mentoring <br></br>
+                    for studying abroad with <br></br>
+                    Scholarships. <br></br>
             </h2>
         </div>
 
@@ -159,21 +170,17 @@ render() {
         <br></br>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-            <h3>    
-            Our platform allows university 
-            & high-school student 
-            from any country of the world 
-            to sign-up and receive mentoring 
-            by a student 
-            from their 
-            desired university program.
+
+
+ 
+            <h3 style = {{fontSize:"40px",fontWeight:'bold'}}>    
+            Our platform allows university <br></br>
+            & high-school student <br></br>
+            from any country of the world <br></br>
+            to sign-up and receive mentoring <br></br>
+            by a student <br></br>
+            from their <br></br>
+            desired university program.<br></br>
                             
                 
                 
@@ -187,7 +194,7 @@ render() {
 
         <div className='col-md-6' > 
 
-            <img src={image1} class="img-fluid" alt="..."/>
+            <img src={image10} class="img-fluid" alt="..."/>
 
 
 
@@ -253,33 +260,40 @@ render() {
 
     <div className = 'col-md-12 my-5'>
         <div className='row'>
+        <div className="col-md-12" style={{fontSize:'50px',color:'red'}}>
+        <p>AND MANY MORE!</p>
+    </div>
+
+    <div className='col-md-3 '>    </div>
 
 
-    <div className='col-md-2 '>    </div>
+    <div className='col-md-6 '>
+        <h1 style={{color:'black',fontWeight:'bold'}}>
+            SERVICES WE PROVIDE: <br></br>
+            STEP-BY-STEP UNIVERSITY APPLICATION <br></br><br></br>
 
+            SAT One Month Crash Course<br></br><br></br>
 
-    <div className='col-md-8 '>
-        <h4 style={{color:'black'}}>
-            SERVICES WE PROVIDE:
-            STEP-BY-STEP UNIVERSITY APPLICATION 
-
-            SAT One Month Crash Course
-
-            IELTS One Month Crash Course
+            IELTS One Month Crash Course<br></br><br></br>
 
             WE HELP YOU FOR 8 COUNTRIES
             AMERICA, SOUTH KOREA, GERMANY, LONDON, AUSTRALIA, ARGENTINA, SINGAPORE, TAIWAN
 
-        </h4>
+        </h1>
         
 
     </div>
 
 
+
     <div className="col-md-12 my-5">
-        <h1> JOIN US TODAY
-                FOR FREE
-                CLICK HERE</h1>
+        <p style={{fontSize:"45px",color:'black',fontWeight:'bold'}}> JOIN US TODAY <br></br>
+                FOR FREE<br></br>
+                <span style={{backgroundColor:'#485AFB',color:'white',marginLeft:'10px'}}>  &nbsp; CLICK HERE &nbsp;</span> 
+                
+                
+                
+                </p>
                
             
 
