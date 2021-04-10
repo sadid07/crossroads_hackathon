@@ -123,79 +123,352 @@ render() {
 
                             <p style={{display:'inline-block'}} > MS (English), University of Oxford (UK); BA, MA (English), University of Dhaka; IELTS: 8.5</p>
                           </div>
-                          <div className='col-md-12 my-5'   style={{display:'inline-block'}}>
-                            <h2> এই কোর্স সম্পর্কে</h2>
-
-
-
-                          </div>
-
-                          <div className='col-md-12 my-3'   style={{display:'inline-block'}}>
-                            <h5 style={{fontWeight:'bold',color:'#34315D'}}> ১) কোর্সটি কাদের জন্যে? </h5>
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * যারা যুক্তরাষ্ট্রে আন্ডারগ্র্যাজুয়েট পড়তে চান।  </p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * নবম থেকে দ্বাদশ শ্রেণির শিক্ষার্থী এবং যারা গ্যাপ ইয়ারে আছেন বর্তমানে </p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * যারা কোনো প্রকার এজেন্সির সহায়তা ছাড়া নিজে নিজে-ই  আবেদন করতে চান।</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * যারা যুক্তরাষ্ট্রের সেরা বিশ্ববিদ্যালয়ে পড়ুয়া বাংলাদেশি শিক্ষার্থীদের কাছ থেকে সরাসরি গাইডলাইন পেতে চান।</p>      
-                            
-
-
-
-                          </div>
-
-
-
-                          <div className='col-md-12 my-5'   style={{display:'inline-block'}}>
-                            <h5 style={{fontWeight:'bold',color:'#34315D'}}> ২) একজন শিক্ষার্থীর কেন এই কোর্সটি করা উচিত?</h5>
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * কোর্সটি করা যাবে যেকোনো সময়, যেকোনো জায়গায় নিজের ফোন থেকেই</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * ১৬ টি মাস্টারক্লাসের মাধ্যমে জটিল এপ্লিকেশন প্রসেসকে সহজে-ই শিক্ষার্থীদের বোধগম্য করে দেয়া হবে।</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * বিশ্ববিদ্যালয় পছন্দ করা ও ফিনান্সিয়াল এইড/স্কলারশীপ বিষয়ক এক্সটেন্সিভ মাস্টারক্লাস</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * কমন এপ্লিকেশন পূরণের এক্সক্লুসিভ ট্রিক্স যা আপনাকে অবশ্যই বাকি এপ্লিকান্টদের থেকে আলাদা করে তুলবে।</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * যুক্তরাষ্ট্রের সেরা বিশ্ববিদ্যালয়গুলোতে অধ্যয়নরত বাংলাদেশি শিক্ষার্থীরা মাস্টারক্লাসগুলো নিয়ে থাকবে।</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * স্যাট ও আইইএলটিএস নিয়ে থাকবে এক্সক্লুসিভ মাস্টারক্লাস</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * রেকমেন্ডেশন লেটার, essays নিয়ে থাকবে  মাস্টারক্লাস</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * কোর্স শেষে আপনার এপ্লিকেশন রিভিউ এর  সুযোগ।</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * ক্রসরোডস ইনিশিয়েটিভের কমিউনিটি “CrossRoads Study Abroad” গ্রুপের এক্সেস।</p>      
-
-
-                          </div>
-
 
 
 
 
 
                           <div className='col-md-12 my-5'   style={{display:'inline-block'}}>
-                            <h5 style={{fontWeight:'bold',color:'#34315D'}}> ৩) কোর্সটি কোন সমস্যাগুলোর সমাধান করবে?</h5>
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * শেখা যাবে যখন খুশি যেখানে খুশি, নিজের ফোনেই।</p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * বিভিন্ন এজেন্সিগুলোর পিছনে কাড়ি কাড়ি টাকা না ঢেলে নিজের এপ্লিকেশন নিজেই করতে পারবেন।</p>      
+                            <h2> কোর্স কন্টেন্ট</h2>
+
 
 
                           </div>
 
+                          <div  className='col-md-12 '   style={{ fontWeight:"bold", color:"#DE1570",backgroundColor:"#EDEDED"}}>
 
+                            <div class="sortable-accordion">
+
+
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 1: ইন্ট্রোডাকশনঃ জেনারেল ওভারভিউ - ইউএস এপ্লিকেশন প্রসেস</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px" ,textTransform:'capitalize'}}> Master Class 2: General Overview: SAT</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 3: General Overview: IELTS (VIDEO) </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 4: A to Z of ECAs </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 5: Essays: Common App </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 6: Essays: Supplemental </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 7: Shortlisting Universities </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 8: A toZ Financial Aid </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 9: Recommendation Letters </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 10: Common App Fill Out </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 11: College Resume </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 12: Wait Listed- LOCI</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px",textTransform:'capitalize'}}> Master Class 13: Visa Application Process </h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default"></li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+                                
+                       
+                           
+
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+
+
+                            </div>
+
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+                          
                           <div className='col-md-12 my-5'   style={{display:'inline-block'}}>
-                            <h5 style={{fontWeight:'bold',color:'#34315D'}}> ৪) যে কয়টি কনটেন্ট ফ্রি তে পাবেন: </h5>
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * কোর্সে মোট ১৬ টি মাস্টারক্লাস রয়েছে। ১ম লেকচারের ৫টি কনটেন্ট অর্থাৎ ভিডিও, কুইজ, ট্রান্সক্রিপ্ট, নোট এবং অডিওবুক এই ৫টি কনটেন্টই ফ্রি। আর ২য়-৫ম ক্লাসের ক্ষেত্রে শুধু ভিডিওগুলো ফ্রিতে দেখা যাবে। বাকি কনটেন্টগুলো দেখতে হলে কোর্সটি কিনতে হবে</p>      
-                            
-  
+                            <h2> FAQ </h2>
+
 
 
                           </div>
 
+                                                    <div  className='col-md-12 '   style={{ fontWeight:"bold", color:"#DE1570",backgroundColor:"#EDEDED"}}>
+
+                            <div class="sortable-accordion">
+
+
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px"}}>একাউন্ট কিভাবে খুলবো?</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        
+                                        <li class="ui-state-default">ওয়েবসাইটের ক্রিয়েট একাউন্ট অপশনে গিয়ে আপনার ইমেইল কিংবা ফোন নাম্বার দিয়ে একাউন্ট খুলতে পারবেন।</li>  
+                                
+                                    </ul> 
+                                </div>
+                             
+
+
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px"}}> কোর্সের মেয়াদ কতদিন?</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        <li class="ui-state-default">এই কোর্সটি দুইমাস মেয়াদী।</li>  
+                                    
+                                    </ul> 
+                                </div>
+                             
 
 
 
 
-                          <div className='col-md-12 my-5'   style={{display:'inline-block'}}>
-                            <h5 style={{fontWeight:'bold',color:'#34315D'}}> ৫) যেভাবে কিনবেন: </h5>
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * নিজের মোবাইল নাম্বার দিয়ে লগ ইন অথবা সাইন আপ করুন </p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * কোর্সের নিচের “Buy Now” অপশন ক্লিক করুন  </p>      
-                            <p style={{ marginLeft:'30px',fontSize:'16px'}}> * পেমেন্টের ধরণ নির্বাচন করে পেমেন্ট সম্পন্ন করুন  </p>      
-  
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px"}}>কোর্সে মোট মাস্টারক্লাস কয়টি?</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        <li class="ui-state-default">১৬ টি।</li>  
+                                      
+                                    </ul> 
+                                </div>
+                             
 
 
-                          </div>
 
+
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px"}}>কোর্সকি শুধু ভিডিও লেকচারের মধ্যে সীমাবদ্ধ নাকি অন্যকোনো ফিচার আছে কোর্সে?</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        <li class="ui-state-star">
+                                        এই কোর্সটি দুইমাস ব্যাপী যেখানে আপনি পাবেন ১৬ টি মাস্টারক্লাস। মাস্টারক্লাসের পাশাপাশি আপনি আমাদের “সাপোর্ট” অপশনের মাধ্যমে পাবেন আপনার যেকোনো ধরণের সমস্যার পারসোনালাইজড সমাধান। তাছাড়া “সাপোর্ট” অপশনের মাধ্যমে আপনি আমাদের সাথে আপনার common app essays, common app eca section রিভিও করার ব্যাপারে যোগাযোগ করতে পারেন। তাছাড়া আপনার এপ্লিকেশন সংক্রান্ত যেকোনো সমস্যার সমাধান কিংবা ফিডব্যাক প্রদানের জন্য আমাদের “সাপোর্ট” অপশনের সাথে আপনি যেকোনো সময় যোগাযোগ করতে পারবেন। 
+                                        
+                                        
+                                        </li>  
+                                        
+                                    </ul> 
+                                </div>
+
+
+
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px"}}> কোর্স করতে কি কম্পিউটার/ল্যাপটপ লাগবে?</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        <li class="ui-state-star">
+                                        অবশ্যই! যেকোনো স্মার্টফোন, ট্যাবলেট থেকে কোর্স করতে পারবেন।
+                                        
+                                        
+                                        </li>  
+                                        
+                                    </ul> 
+                                </div>
+                             
+
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px"}}>  ভিডিও ডাউনলোড করার কোনো অপশন আছে?</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        <li class="ui-state-star">
+                                        না, অফলাইন বা ভিডিও ডাউনলোড করার কোনো অপশন নেই।
+                                        
+                                        
+                                        </li>  
+                                        
+                                    </ul> 
+                                </div>
+                             
+
+
+                                
+                                <h3 style ={{fontWeight:"bold", color:"#34315D",fontSize:"16px"}}> সার্টিফিকেট কিভাবে পাবো?</h3>
+
+                                <div class="inner" >
+                                    <ul class="sortable">
+                                        <li class="ui-state-star">
+                                        আপনি কোর্সটির সবগুলো ভিডিও দেখার পর সার্টিফিকেট অপশন চলে আসবে।
+
+                                        
+                                        
+                                        </li>  
+                                        
+                                    </ul> 
+                                </div>
+                             
+
+
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             
+
+                            </div>
+
+                                
+
+
+
+
+
+
+
+                        </div>
 
 
 
@@ -239,7 +512,7 @@ render() {
                                   <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
                                   <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
                                 </svg>
-                                <p style={{marginBottom:'15px',fontSize:'15px',marginTop:'10px'}}>সময় লাগবে <br></br>20 ঘন্টা</p>
+                                <p style={{marginBottom:'15px',fontSize:'15px',marginTop:'10px'}}>সময় লাগবে <br></br>16 ঘন্টা</p>
                                 <p></p>
 
 
@@ -394,8 +667,9 @@ render() {
 
 
                               <div className='col-md-6 my-5' >
-                              <button style = {{fontSize:'18px' ,backgroundColor:'#3BC57A', border:'none'}} type="button" class="btn btn-info">কোর্সটি  শুরু করুন  </button>
-
+                                <a href ='/payments'>
+                                  <button style = {{fontSize:'18px' ,backgroundColor:'#3BC57A', border:'none'}} type="button" class="btn btn-info">কোর্সটি  শুরু করুন  </button>
+                                </a>
 
                               </div>
 

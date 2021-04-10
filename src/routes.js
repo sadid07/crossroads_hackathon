@@ -7,15 +7,24 @@ import Signup from "./containers/Signup";
 import HomepageLayout from "./containers/Home";
 import Dashboard from "./containers/Dashboard";
 import Skills from "./containers/Skills";
+import Payments from "./containers/Payments";
+import Checkout from "./containers/Checkout";
+// import Skills from "./containers/Skills";
+// import Skills from "./containers/Skills";
+// import Skills from "./containers/Skills";
 
 
 const BaseRouter = () => (
   <Hoc>
 
-    <Route path="/login" component={Login} />
-    <Route path="/signup" component={Signup} />
-    <Route path="/Dashboard" component={Dashboard} />
-    <Route path="/skills" component={Skills} />
+    <Route exact path="/login" component={Login} />
+    <Route exact path="/signup" component={Signup} />
+    <Route exact path="/dashboard" component={Dashboard} />
+    <Route exact path="/skills" component={Skills} />
+    <Route exact path="/payments" component={Payments} />
+    <Route exact path="/checkout" component={Checkout} />
+    {/* <Route path="/skills" component={Skills} />
+    <Route path="/skills" component={Skills} /> */}
    
     <Route exact path="/" component={HomepageLayout} />
   </Hoc>

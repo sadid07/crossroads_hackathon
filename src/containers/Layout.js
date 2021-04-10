@@ -54,13 +54,14 @@ class CustomLayout extends React.Component {
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="/" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="/dashboard" class="nav__link">Dashboard</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="#FAQ" class="nav__link">FAQ</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
-                        <li class="nav__item"><a href="skills" class="nav__link"> Skills </a></li>
+                        <li class="nav__item"><NavLink to="/" class="nav__link active-link">Home</NavLink></li>
+                        <li class="nav__item"><NavLink to="/dashboard" class="nav__link">Dashboard</NavLink></li>
+                        <li class="nav__item"><NavLink to="/about" class="nav__link">About</NavLink></li>
+                        <li class="nav__item"><NavLink to="/services" class="nav__link">Services</NavLink></li>
+                        <li class="nav__item"><NavLink to="/FAQ" class="nav__link">FAQ</NavLink></li>
+                        <li class="nav__item"><NavLink to="/contact" class="nav__link">Contact us</NavLink></li>
+                        <li class="nav__item"><a href="/skills" class="nav__link"> Skills </a></li>
+                        <li class="nav__item"><a href="/payments" class="nav__link"> Payments </a></li>
                         
                         
                         <Link to={"/login"} >

@@ -1,36 +1,171 @@
-.dropdown-menu {
-  background: red;
-  width: 200px;
-  position: absolute;
-  top: 80px;
-  list-style: none;
-  text-align: start;
+
+.sortable-accordion {
+    margin:20px;
+	border-radius:5px;
+	/* background:#1888c4; */
+	overflow:hidden;
+	/* width:200px; */
+	/* position:absolute; */
+	top: 365px;
+  left: 371px;
+}
+.sortable-accordion h3 {
+    color:black;
+    cursor:pointer;
+    margin:0;
+    padding:13px 16px 13px 18px;
+	font-size:12px;
+	text-transform:uppercase;
+  background:#FAFAFA;
+  margin-top:  10px;
+  /* border-radius: 10px; */
+}
+.sortable-accordion h3:hover{
+	background:#f8f8f8;
+}
+.sortable-accordion h3.current {
+    cursor:default
+}
+.sortable-accordion li{
+	font-size:14px;
+	color:black;
+	font-weight:400;
+	 padding: 11px 10px 11px 43px;
+ 
+  list-style:none;
+  position:relative;
+}
+.sortable-accordion li:hover{
+	cursor:pointer;	
+	background-color:#f8f8f8;
+}
+.inner{
+  background-color:#FAFAFA;
 }
 
-.dropdown-menu li {
-  background: #1888ff;
-  cursor: pointer;
+.ui-sortable-helper{
+	cursor:move; opacity:0.8; background-color:#157eb6;
+	box-shadow:0px 5px 10px -5px rgba(0, 0, 0, 0.3);	
+}
+.ui-sortable-placeholder{
+	border: 2px dotted #0e9ce8 !important;
+	background:#158bca !important;
+	padding:11px 10px 11px 43px;
+	height:15px;
+}
+.options{
+	background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/options.png") 0 0 no-repeat;
+	width:26px;
+	height:21px;
+	display:block;
+	position:absolute;
+	top:10px;
+	right:10px;
 }
 
-.dropdown-menu li:hover {
-  background: #5cabff;
-}
 
-.dropdown-menu.clicked {
-  display: none;
-}
 
-.dropdown-link {
-  display: block;
-  height: 100%;
-  width: 100%;
-  text-decoration: none;
-  color: #fff;
-  padding: 16px;
-}
 
-@media screen and (max-width: 960px) {
-  .fa-caret-down {
-    display: none;
-  }
+
+
+#submenu{
+	background-color:#157eb6;
+	position:absolute;
+	top:0px;
+	left:200px;
+  width: 100px;
+	border-radius:4px;
+	box-shadow:0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+	padding:2px 5px 2px 1px;
+	display:none;
+}
+#submenu span{
+	width: 15px;
+    height: 15px;
+	display:block;
+	background-color:#157eb6;
+	position:absolute;
+	left: -3px;
+    top: 12px;
+	-ms-transform: rotate(45deg); 
+  	-webkit-transform: rotate(45deg); 
+    transform: rotate(45deg);	
+	 z-index:1;
+}
+#submenu a{
+  float: left;
+  width: 27px;
+  height: 20px;
+  padding: 8px 3px 8px;
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/submenu-sprite.png") 8px 9px no-repeat;	
+  position:relative;
+  z-index:2;
+}
+#submenu a.compare:hover{background-position:8px -22px}
+#submenu a.revisions{background-position:-27px 9px}
+#submenu a.revisions:hover{background-position:-27px -22px}
+#submenu a.edit{background-position:-64px 9px}
+#submenu a.edit:hover{background-position:-64px -22px}
+
+
+#dropdown{	
+	position:absolute;
+	top: 60px;
+	left: 316px;
+}
+#drop-select{
+	border-radius:4px;
+	background:#229bdc url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/dropdown-arrows.png") 313px 18px no-repeat;
+	text-transform:uppercase;
+	color:#fff;
+	width:300px;
+	padding:17px 20px;
+	font-weight:700;
+    font-size: 13px;	
+	cursor:pointer;
+}
+#dropdown-list{	
+	border-radius:4px;
+	background:#229bdc;	
+	padding-bottom:1px;
+	width:400px;
+	margin-left:0px;	
+	margin-top:10px;
+	opacity:0;
+	-webkit-transition: all 200ms ease-out;
+		   -moz-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+		    -ms-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+		     -o-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+		        transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);	
+}
+#dropdown-list.animate{
+margin-top:-3px;
+	opacity:1;
+	-webkit-transition: all 200ms ease-out;
+		   -moz-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+		    -ms-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+		     -o-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+		        transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);	
+}
+#dropdown-list .header{
+	background:#1888c4; color:#fff;
+	padding:12px 20px;
+	text-transform:uppercase;
+	font-weight:700;
+	border-radius:0 5px 0 0;
+}
+#dropdown-list li{
+	list-style:none;
+	padding:12px 20px;
+	color:#abe2ff;
+	font-size:15px;
+	font-weight:500;
+	margin:10px 4px;
+	background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/bullet.png") 374px 17px no-repeat;
+}
+#dropdown-list li:hover{
+	background-color:#fff;
+	border-radius:4px; 
+	cursor:pointer;
+	color:#1888c4;
 }

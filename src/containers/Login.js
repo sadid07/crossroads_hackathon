@@ -175,10 +175,6 @@ class LoginForm extends React.Component {
 
 
 
-
-    if (token) {
-      return <Redirect to="/" />;
-    }
     return (
       <>
 

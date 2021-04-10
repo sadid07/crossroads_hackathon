@@ -41,8 +41,14 @@ class Dashboard extends React.Component {
 
   state = {
     loading: false,
+    data: [],
     error: null,
-    data: []
+    facebook: '',
+    google_class_room: '',
+    course: '',
+    support: '',
+    classroom: '',
+    community: '',
   };
 
 
@@ -55,10 +61,21 @@ componentDidMount() {
 
 
     axios
-      .get(`${endpoint}/AccountsView/`)
+      .get(`${endpoint}/DashboardLinkView/`)
 
       .then(res => {
-        this.setState({ data: res.data.results, loading: false });
+        window.scrollTo(0, 0);
+        this.setState({
+          
+          facebook: res.data.results[0].facebook, 
+          google_class_room: res.data.results[0].google_class_room, 
+          course: res.data.results[0].course, 
+          support: res.data.results[0].support, 
+          classroom: res.data.results[0].classroom, 
+          community: res.data.results[0].community, 
+          
+          
+          loading: false });
         window.scrollTo(0, 0);
 
 
@@ -66,12 +83,36 @@ componentDidMount() {
       .catch(err => {
         this.setState({ error: err, loading: false });
       });
-  }
+
+
+
+      authAxios
+      .get(`${endpoint}/userprofile/`)
+
+      .then(res => {
+        console.log(res.data.results)
+          this.setState({
+              loading: false,
+              data: res.data.results
+          });
+
+      })
+      .catch(err => {
+          this.setState({ error: err, loading: false });
+
+      });
+
+
+
+
+
+      
+  };
 
 
 
 render() {
-    const { data, error, loading } = this.state;
+    const { data, error, loading ,facebook,google_class_room,support,classroom,community,course} = this.state;
 
 
     window.scrollTo(0, 0);
@@ -80,24 +121,32 @@ render() {
 
 
         <div className='container' >
-            <div className='row ' style ={{backgroundColor:"#FAFAFA",margin:'auto'}}>
+            <div className='row ' style ={{backgroundColor:"#FAFAFA"}}>
                 
 
-                      <div className='col-md-12'  style ={{margin:'auto'}}>
-                        <div className='row'  style ={{margin:'auto'}}>
+                      <div className='col-md-12'  >
+                        <div className='row'  >
 
 
 
-                          <div className='col-md-7'>
-                            <div className='row my-5'  style ={{margin:'auto'}}>
-                              <div className='col-md-12 my-3'>
+                          <div className='col-md-7' style ={{marginTop:'70px'}}>
+                            <div className='row'  style ={{margin:'auto'}}>
+                              <div className='col-md-12 '>
                                 <br></br>
                                 <div  style = {{borderRadius:'20px'}} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
                                   <img style={{display:'inline-block',width:'70px',height:'70px'}} src="https://lms10.s3.ap-southeast-1.amazonaws.com/skill-up/spoken-english/instructor.jpg" class="ui medium circular image"/>
                                   <div style={{display:'inline-block',marginLeft:'10px',marginTop:'20px',marginBottom:'20px'}}>
+                                  { data &&
+                                  data.map(v => {
+                                      return (
+                                    <>
 
-                                      <h5 style={{marginLeft:'10px',color:'#FF039A',fontWeight:'bold'}}> Munzereen Shahid</h5>
-                                      <p style={{ marginLeft:'10px'}}> MS (English), University of Oxford (UK); </p>
+                                      <h5 style={{marginLeft:'10px',color:'#FF039A',fontWeight:'bold'}}> {v.fast_name} {v.last_name}</h5>
+                                      <p style={{ marginLeft:'10px'}}> {v.school} {v.college} </p>
+
+                                    </>
+                                      );
+                                     })}
                                   </div>
                                 </div>
                               </div>
@@ -152,6 +201,112 @@ render() {
                               </div>
 
 
+                              <div className='col-md-12 '>
+                                <br></br>
+                                <div style = {{padding:0}} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
+                                    
+                                    
+                                    
+                                    <div style={{backgroundColor:"#FF039A" ,padding:0}}>
+
+                                    <svg style={{display:'inline-block'}} xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#FFFFFF" class="bi bi-easel-fill" viewBox="0 0 16 16">
+                                      <path d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"/>
+                                    </svg>
+                                      
+
+                                      <h5 style={{ display:'inline-block',backgroundColor:"#FF039A",color:'#F8F9FA',fontWeight:'bold', height:'50px' ,padding:14}}> প্রোফাইল</h5>
+
+                                    </div>
+
+
+                                    { data &&
+                        data.map(v => {
+                            return (
+                        <>
+                            <div class="text-center">
+                                {/* <img style={{width:100}} src={v.image} class="rounded" alt="..."/> */}
+                            </div>
+                            <br></br>
+                            <table class="table">
+                            
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Name</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>{v.user_name}</td>
+                                    </tr>
+
+
+
+
+
+                                    <tr>
+                                        <th scope="row">School</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{v.school}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">College</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{v.college}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Email</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{v.email}</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th scope="row">Phone</th>
+                                        <td colspan="2">  </td>
+                                        <td></td>
+
+                                        <td>{v.phone}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">address</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{v.address}</td>
+                                    </tr>
+
+                                
+
+                                    <tr>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </>
+                            );
+                        })}
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                              </div>
 
 
 
@@ -181,11 +336,13 @@ render() {
 
 
 
+                          <div className='col-md-1'  ></div>
 
 
-                          <div className='col-md-4'  style ={{margin:'auto'}}>
+                          <div className='col-md-4' style= {{marginTop:"20px"}}  >
                             <div className='row my-5 m-4' style = {{textAlign: 'center',margin:'auto'}}>
                               <div className='col-md-12' style = {{marginTop:'30px'}}>
+                                <a href ={classroom}>
                                 <div  style = {{borderRadius:'10px'}} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
                                   
                                   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#FF039A" class="bi bi-collection-play" viewBox="0 0 16 16">
@@ -199,10 +356,14 @@ render() {
                                   </div>
 
                                 </div>
+                                </a>
 
                               </div>
 
+
                               <div className='col-md-12 ' style = {{marginTop:'15px'}}>
+                              <a href ={community}>
+
                                 <div  style = {{borderRadius:'10px'}} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
                                   
 
@@ -223,6 +384,8 @@ render() {
                                   </div>
 
                                 </div>
+                                </a>
+
 
                               </div>
 
@@ -230,6 +393,8 @@ render() {
 
 
                               <div className='col-md-12 ' style = {{marginTop:'15px'}}>
+                              <a href ={course}>
+
                                 <div  style = {{borderRadius:'10px'}} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
                                   
 
@@ -249,11 +414,15 @@ render() {
                                   </div>
 
                                 </div>
+                                </a>
+
 
                               </div>
 
 
                               <div className='col-md-12 ' style = {{marginTop:'15px'}}>
+                              <a href ={support}>
+
                                 <div  style = {{borderRadius:'10px'}} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
                                   
 
@@ -271,12 +440,16 @@ render() {
                                   </div>
 
                                 </div>
+                                </a>
+
 
                               </div>
 
 
 
                               <div className='col-md-12 ' style = {{marginTop:'15px',}}>
+                              <a href ={facebook}>
+
                                 <div  style = {{borderRadius:'10px',backgroundColor:'#0055FF'}} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
                                   
 
@@ -292,11 +465,15 @@ render() {
                                   </div>
 
                                 </div>
+                                </a>
+
 
                               </div>
 
 
                               <div className='col-md-12 ' style = {{marginTop:'15px',}}>
+                              <a href ={google_class_room}>
+
                                 <div  style = {{borderRadius:'10px',backgroundColor:'#4C9D58'}} class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"  role="tab" aria-controls="profile">
                                   
 
@@ -311,6 +488,8 @@ render() {
                                   </div>
 
                                 </div>
+                                </a>
+
 
                               </div>
 
