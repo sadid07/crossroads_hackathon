@@ -12,6 +12,7 @@ import Checkout from "./containers/Checkout";
 // import Skills from "./containers/Skills";
 // import Skills from "./containers/Skills";
 // import Skills from "./containers/Skills";
+import UserProfileUpdate from "./containers/UserProfileUpdate"
 
 
 const BaseRouter = () => (
@@ -23,8 +24,8 @@ const BaseRouter = () => (
     <Route exact path="/skills" component={Skills} />
     <Route exact path="/payments" component={Payments} />
     <Route exact path="/checkout" component={Checkout} />
-    {/* <Route path="/skills" component={Skills} />
-    <Route path="/skills" component={Skills} /> */}
+    <Route path="/userprofileupdate" component={UserProfileUpdate} />
+    {/* <Route path="/skills" component={Skills} /> */}
    
     <Route exact path="/" component={HomepageLayout} />
   </Hoc>

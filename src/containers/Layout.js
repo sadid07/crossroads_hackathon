@@ -39,7 +39,7 @@ class CustomLayout extends React.Component {
 
   render() {
  
-
+    const { authenticated, cart, loading } = this.props;
     return (
       <>
       {/* // <!--========== SCROLL TOP ==========--> */}
@@ -50,27 +50,69 @@ class CustomLayout extends React.Component {
       {/* <!--========== HEADER ==========--> */}
         <header class="l-header" id="header" >
             <nav class="nav bd-container">
-                <a href="/" class="nav__logo">crossroads-study</a>
+                <NavLink style={{ textDecoration: 'none', color: 'black',fontWeight:"bold" }} to="/" class="nav__logo">crossroads-study</NavLink>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><NavLink to="/" class="nav__link active-link">Home</NavLink></li>
-                        <li class="nav__item"><NavLink to="/dashboard" class="nav__link">Dashboard</NavLink></li>
-                        <li class="nav__item"><NavLink to="/about" class="nav__link">About</NavLink></li>
-                        <li class="nav__item"><NavLink to="/services" class="nav__link">Services</NavLink></li>
-                        <li class="nav__item"><NavLink to="/FAQ" class="nav__link">FAQ</NavLink></li>
-                        <li class="nav__item"><NavLink to="/contact" class="nav__link">Contact us</NavLink></li>
-                        <li class="nav__item"><a href="/skills" class="nav__link"> Skills </a></li>
-                        <li class="nav__item"><a href="/payments" class="nav__link"> Payments </a></li>
+                        <li class="nav__item"><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/" class="nav__link active-link">Home</NavLink></li>
+                        <li class="nav__item"><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/about" class="nav__link">About</NavLink></li>
+                        {/* <li class="nav__item"><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/services" class="nav__link">Services</NavLink></li> */}
+                        {/* <li class="nav__item"><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/FAQ" class="nav__link">FAQ</NavLink></li> */}
+                        <li class="nav__item"><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/contact" class="nav__link">Contact us</NavLink></li>
+                        <li class="nav__item"><a style={{ textDecoration: 'none', color: 'black' }} href="/skills" class="nav__link"> Our Course </a></li>
+                        {/* <li class="nav__item"><a style={{ textDecoration: 'none', color: 'black' }} href="/payments" class="nav__link"> Payments </a></li> */}
+                        <li class="nav__item"><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/dashboard" class="nav__link">Dashboard</NavLink></li>
+
+                        {authenticated ? (
+                <>
+                  <Link header style={{ textDecoration: 'none', color: 'black' }}>
+                      <div className="dropdown" >
+                        <div className="header__option header__option1" style={{ marginTop: "1px",marginLeft: "25px"}}>
+                   
+                      <span className="header__optionLineTwo">
+                        {authenticated ? "Sign Out" : "Sign In"}
+                            <svg xmlns="http://www.w3.org/2000/svg"  style={{marginLeft:'3px'}} width="12" height="12" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                      </span>
+                    </div>
+                     
+                    <div className="dropdown-content">
+                        <a className ='singup__dropdown__icon' ><Icon name=' sort up' style={{color:"white" }}></Icon></a>
+                        <div className="dropdown-1" >
+                         
+                            <Link to='/dashboard' style={{ textDecoration: 'none', color: 'black' }}>Dashboard</Link>                          
+                            <Link to='#' header onClick={() => this.props.logout()} style={{ textDecoration: 'none', color: 'black' }}>LogOut</Link>
+                          <br></br>
+                        </div>
                         
-                        
-                        <Link to={"/login"} >
-                        <li class="nav__item"><a href="#contact" class="nav__link">SignUp</a></li>
-                       
-                        </Link>
 
 
 
+                      
+                    </div>
+                    </div>
+
+              </Link>
+
+             </>
+
+              )
+              :
+              (
+
+                <Link to={"/login"} style={{ textDecoration: 'none', color: 'black' }}>
+                <div className="header__option header__option1" style={{marginLeft:'25px', marginTop:'1px'}} >
+                
+                  <span className="header__optionLineTwo">
+                    {authenticated ? "Sign Out" : "SignIn"}
+                  </span>
+                </div>
+              </Link>
+            
+
+              )
+              }
 
 
 

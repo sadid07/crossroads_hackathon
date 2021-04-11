@@ -171,6 +171,9 @@ class LoginForm extends React.Component {
 
 
 
+    if (token) {
+      return <Redirect to="/" />;
+    }
 
 
 
@@ -188,7 +191,7 @@ class LoginForm extends React.Component {
         >
            
           <Grid.Column style={{ maxWidth: 450 }}>
-          <Zoom left>
+          {/* <Zoom left> */}
             {/* {error && <p>{this.props.error.message}</p>} */}
             <h6 className='error_messes' id="error_messes"></h6>
 
@@ -233,6 +236,7 @@ class LoginForm extends React.Component {
                     size="large"
                     loading={loading}
                     disabled={loading}
+                    style={{ backgroundColor: "#FF039A"}}
                   >
                     Login
                 </Button>
@@ -243,46 +247,8 @@ class LoginForm extends React.Component {
 
 
 
-                  <GoogleLogin
-                    clientId="356944659457-nm7vn4p2jtmcvd20gsqqgiep04qaq6rt.apps.googleusercontent.com"
-                    buttonText="Login"
-                    onSuccess={this.responseGoogle}
-                    onFailure={this.responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                  />
 
 
-                  <FacebookLogin
-                    textButton={" \u00a0 \u00a0 Login"}
-                    // size='small'
-                    // for test
-                    // local host 
-                    appId="152971560061948"
-
-
-                    // local host it is working
-                    // appId="566800850960501"
-
-
-                    // orbitplug
-                    // appId="781826136014066"
-
-                    // for production
-                    // appId="779646426301443"
-
-                    autoLoad={false}
-                    scope="email"
-                    // fields="name,email,picture"
-                    callback={this.responseFacebook}
-                    cssClass="my-facebook-button-class"
-                    icon={<svg style={{ color: '#1771E6' }} xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                    </svg>}
-
-                  >
-
-
-                  </FacebookLogin>
 
                 </Segment>
               </Form>
@@ -300,7 +266,7 @@ class LoginForm extends React.Component {
       
               </Message>
             </React.Fragment>
-            </Zoom>
+            {/* </Zoom> */}
           </Grid.Column>
           
         </Grid>

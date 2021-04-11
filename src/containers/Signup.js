@@ -203,6 +203,7 @@ class RegistrationForm extends React.Component {
                   size="large"
                   loading={loading}
                   disabled={loading}
+                  style={{ backgroundColor: "#FF039A"}}
                 >
                   Signup
                 </Button>

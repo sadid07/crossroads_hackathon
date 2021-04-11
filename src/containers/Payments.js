@@ -77,6 +77,10 @@ render() {
 
 
     window.scrollTo(0, 0);
+    const isAuthenticated = localStorage.getItem('token')
+    if (!isAuthenticated) {
+        return <Redirect to="/login" />;
+    }
 
     return (
 

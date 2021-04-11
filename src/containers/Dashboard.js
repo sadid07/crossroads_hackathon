@@ -42,6 +42,7 @@ class Dashboard extends React.Component {
   state = {
     loading: false,
     data: [],
+    noticeData:[],
     error: null,
     facebook: '',
     google_class_room: '',
@@ -90,10 +91,29 @@ componentDidMount() {
       .get(`${endpoint}/userprofile/`)
 
       .then(res => {
-        console.log(res.data.results)
           this.setState({
               loading: false,
               data: res.data.results
+          });
+
+      })
+      .catch(err => {
+          this.setState({ error: err, loading: false });
+
+      });
+
+// ................................................................
+
+
+      authAxios
+      .get(`${endpoint}/NoticeBoardView/`)
+
+      .then(res => {
+        console.log(res.data.results)
+          this.setState({
+            
+              loading: false,
+              noticeData: res.data.results[0]
           });
 
       })
@@ -106,14 +126,33 @@ componentDidMount() {
 
 
 
+
+
+
+
+
+
+
+
       
   };
+CreateProductDetail = () => {
+    const { noticeData } = this.state;
 
+    return { __html: noticeData.notice };
+  }
 
 
 render() {
     const { data, error, loading ,facebook,google_class_room,support,classroom,community,course} = this.state;
-
+    const {   token } = this.props;   
+    console.log(token,'........')
+    
+    
+    const isAuthenticated = localStorage.getItem('token')
+    if (!isAuthenticated) {
+        return <Redirect to="/login" />;
+    }
 
     window.scrollTo(0, 0);
 
@@ -122,13 +161,8 @@ render() {
 
         <div className='container' >
             <div className='row ' style ={{backgroundColor:"#FAFAFA"}}>
-                
-
                       <div className='col-md-12'  >
                         <div className='row'  >
-
-
-
                           <div className='col-md-7' style ={{marginTop:'70px'}}>
                             <div className='row'  style ={{margin:'auto'}}>
                               <div className='col-md-12 '>
@@ -142,7 +176,7 @@ render() {
                                     <>
 
                                       <h5 style={{marginLeft:'10px',color:'#FF039A',fontWeight:'bold'}}> {v.fast_name} {v.last_name}</h5>
-                                      <p style={{ marginLeft:'10px'}}> {v.school} {v.college} </p>
+                                      <p style={{ marginLeft:'10px'}}> {v.school} , {v.college} </p>
 
                                     </>
                                       );
@@ -172,18 +206,12 @@ render() {
                                     </div>
 
 
+                                  <br></br>
+                                  <br></br>
+                                  <div style={{ marginLeft:'10px'}} dangerouslySetInnerHTML={this.CreateProductDetail()} ></div>
+                                  <br></br>
+                                  <br></br>
 
-
-                                      <br></br>
-                                      <br></br>
-                                      <br></br>
-                                      <br></br>
-                                      <br></br>
-                                      <br></br>
-                                      <br></br>
-                                      <br></br>
-                                      <br></br>
-                                      <br></br>
 
 
 
@@ -299,8 +327,18 @@ render() {
 
 
 
-
-
+                          <NavLink  style={{ backgroundColor: "#FF039A",textDecoration: "none" }} to='/userprofileupdate'>
+                            <Button
+                              color="teal"
+                              fluid
+                              size="large"
+                              loading={loading}
+                              disabled={loading}
+                              style={{ backgroundColor: "#FF039A",textDecoration: "none" }}
+                            >
+                              Update Profile
+                            </Button>
+                            </NavLink>
 
 
 
@@ -493,7 +531,8 @@ render() {
 
                               </div>
 
-
+                              {/* userprofileupdate */}
+              
 
 
 

@@ -1,6 +1,6 @@
 // const localhost = "http://orbitplug.com.swadexpress.com";
-// const localhost = "https://orbitplug.xyz"; 
-const localhost = "http://127.0.0.1:8000"; 
+const localhost = "http://crossroads-study.swadexpress.com"; 
+// const localhost = "http://127.0.0.1:8000"; 
 // const localhost = "http://192.168.1.137:8000/"; 
 // const localhost = "https://kawsarkhan.com"; 
 
