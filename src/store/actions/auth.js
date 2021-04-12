@@ -71,6 +71,7 @@ export const authLogin = (email, password) => {
         var data = err.response.data
         if (((Object.values(data).length) == 1)) {
           dispatch(authFail(err.response.data));
+          console.log(data,'..........data')
         } else {
           console.log('is not empty ')
         }

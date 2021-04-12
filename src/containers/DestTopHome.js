@@ -55,23 +55,11 @@ import image8 from "./img/image8.png"
 import image9 from "./img/image9.jpeg"
 
 
-
 import image10 from "./img/image10.jpg"
-
 import image11 from "./img/image11.JPG"
 import image12 from "./img/image12.JPG"
 import image13 from "./img/image13.jpg"
 import image14 from "./img/image14.jpg"
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -87,29 +75,22 @@ import un5 from "./img/un5.png"
 import un6 from "./img/un6.png"
 import un7 from "./img/un7.png"
 
-
-
-
-
-
-
-
 import wocommaerce from "./img/wocommaerce.png"
 import django from "./img/django.png"
 import reactjs from "./img/reactjs.jpeg"
 import opencart from "./img/opencart.jpeg"
 import flask from "./img/flask.png"
-
-
 import "./styles.css";
 
-
+import "./Header.css";
 
 
 class DestTopHome extends React.Component {
 
 
     // https://bup.edu.bd/system/uploads/setting/value/29/combocation.jpg
+
+
 
 render() {
 
@@ -133,8 +114,8 @@ render() {
 
 
         <div className='col-md-6 my-5'>
-            <h4>ARE YOU LOOKING FOR A SCHOLARSHIP TO STUDY ABROAD?
-                YOU ARE IN THE RIGHT PLACE!
+            <h4> ARE YOU LOOKING FOR A SCHOLARSHIP TO STUDY ABROAD?
+                 YOU ARE IN THE RIGHT PLACE!
             </h4>
 
         </div>
@@ -147,7 +128,7 @@ render() {
         </div>
 
 
-        <div className='col-md-6 my-5' > 
+        <div className='col-md-6 my-1' > 
      
     
             <h2 style = {{fontSize:"35px",fontWeight:'bold'}}>    We connect <br></br>
@@ -162,15 +143,19 @@ render() {
         </div>
 
 
+        <div className=' phone_image col-12 my-5' > 
+
+            <img src={image10} class="img-fluid" alt="..."/>
+
+        </div>
 
 
 
-
-        <div className='col-md-6' > 
+        <div className='col-md-6 my-5' > 
+        <br></br>
+      
         <br></br>
         <br></br>
-        <br></br>
-
 
  
             <h3 style = {{fontSize:"40px",fontWeight:'bold'}}>    
@@ -192,7 +177,7 @@ render() {
 
 
 
-        <div className='col-md-6' > 
+        <div className='col-md-6 my-5 destop_image' > 
 
             <img src={image10} class="img-fluid" alt="..."/>
 
@@ -214,25 +199,25 @@ render() {
     <div className = 'col-md-12'>
         <div className='row'>
 
-            <div className='col-md-2 '>   
+            <div className='col-6 col-md-2 '>   
                 <img src={un2} class="img-fluid" alt="..."/>
             </div>
 
-            <div className='col-md-2 '>   
+            <div className=' col-6 col-md-2 '>   
                 <img src={un3} class="img-fluid" alt="..."/>
             </div>
 
-            <div className='col-md-2 '>   
+            <div className=' col-6 col-6 col-md-2 '>   
                 <img src={un4} class="img-fluid" alt="..."/>
             </div>
 
-            <div className='col-md-2 '>   
+            <div className=' col-6 col-md-2 '>   
                 <img src={un5} class="img-fluid" alt="..."/>
             </div>
-            <div className='col-md-2 '>   
+            <div className=' col-6 col-md-2 '>   
                 <img src={un6} class="img-fluid" alt="..."/>
             </div>
-            <div className='col-md-2 '>   
+            <div className=' col-6 col-md-2 '>   
                 <img src={un7} class="img-fluid" alt="..."/>
             </div>
 

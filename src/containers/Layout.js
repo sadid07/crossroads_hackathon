@@ -125,8 +125,15 @@ class CustomLayout extends React.Component {
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
+                {/* <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
+                </div> */}
+
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
                 </div>
             </nav>
         </header>
@@ -147,7 +154,7 @@ class CustomLayout extends React.Component {
       {/* // <!--========== FOOTER ==========--> */}
         <footer class="footer section footer-container" >
             <div class="footer__container bd-grid">
-                <div class="footer__content">
+                {/* <div class="footer__content">
                     <a href="#" class="footer__logo">crossroads-study</a>
                     <span class="footer__description">Restaurant</span>
                     <div>
@@ -186,7 +193,7 @@ class CustomLayout extends React.Component {
                         <li>swadexpress@email.com</li>
                     </ul>
                 </div>
-              
+               */}
 
 
 
